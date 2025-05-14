@@ -1,0 +1,101 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="2561420749" file="C:\Desktop\face detection and tracking ,recongizaton\face detection on image\Face_Detection_1.prj" location="C:\Desktop\face detection and tracking ,recongizaton\face detection on image" name="Face_Detection_1" target="target.mlapps" target-name="Package App">
+    <param.appname>Face_Detection_1</param.appname>
+    <param.authnamewatermark>Abdullah Alaba</param.authnamewatermark>
+    <param.email>abdullahalaba13@gmail.com</param.email>
+    <param.company>Zagzig Faculty of Engneering</param.company>
+    <param.icon />
+    <param.icons />
+    <param.summary>Face Detectection app</param.summary>
+    <param.description>Face Detectection app</param.description>
+    <param.screenshot>C:\Users\abdal\AppData\Local\Temp\tp92bc2048_9c82_494e_868e_dc4b6ef0704c.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>C:\Desktop</param.output>
+    <param.guid>1b38a6dc-c11a-46ec-9570-8cd920ffe8fe</param.guid>
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\Face_Detection.mlapp</file>
+    </fileset.main>
+    <fileset.depfun />
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\" name="Desktop" optional="false">C:\Desktop</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\D_Matlab</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="gpucoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
