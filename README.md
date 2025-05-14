@@ -35,18 +35,5 @@ The algorithm integrates:
 - MATLAB R2021a or higher
 - Image Processing Toolbox
 
-## Team Members
-- Abdallah Ahmed Abdelwahid  
-- Abdelrahman Mohamed Saad  
-- Ahmed Gamal Mahmoud Salem  
-- Ahmed Osama Soliman  
-- Ezzat Mohamed Abdelmohsen Mohamed  
-- Mohamed Abdo El-Sayed Attallah  
-- Nada Mohamed Naguib  
-- Shahd Ahmed Goda
-
-## Screenshots
-*Add screenshots here if needed*
-
 ## License
 This project is for educational and academic use.
