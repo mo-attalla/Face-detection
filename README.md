@@ -1,39 +1,82 @@
-# High-Precision Face Detection using MATLAB
+# 🎯 High-Precision Face Detection using MATLAB GUI
 
-## Overview
-This project presents a MATLAB-based desktop GUI application designed to detect human faces in digital images using a **custom algorithm** — without relying on high-level built-in functions.
+## 📌 Overview
 
-The algorithm integrates:
-- Skin tone segmentation (using YCbCr color space)
-- Shape symmetry analysis
-- Geometric filtering & ellipse fitting
+This project presents a **face detection system** developed in MATLAB as part of the *Image Processing (ECE228)* course at Zagazig University. The system is capable of accurately detecting **human faces** in digital images by leveraging a **custom-designed algorithm** that avoids the use of high-level built-in face detection functions.
 
-## Features
-- GUI for easy interaction (Load Image, Detect, Reset, Exit)
-- High accuracy for frontal faces
-- Low false positive rate through strict verification
-- Manual implementation using basic image processing techniques
+Instead, we focused on implementing fundamental image processing techniques such as **skin tone segmentation**, **symmetry analysis**, and **geometric filtering** to detect facial regions. The project also includes a full **Graphical User Interface (GUI)** to allow users to interactively load images, start detection, and view results.
 
-## How It Works
-1. Image smoothing using Gaussian filter
-2. Conversion from RGB to YCbCr
-3. Skin region segmentation based on Cr and Cb thresholds
-4. Morphological operations to clean the mask
-5. Region properties extraction
-6. Face verification based on:
-   - Elliptical shape
-   - Horizontal symmetry
-   - Eccentricity constraints
+---
 
-## GUI Functions
-- **Load Image**: Selects an image from the device  
-- **Start Detection**: Applies the detection pipeline  
-- **Reset**: Clears all current data  
-- **Exit**: Closes the application
+## 🎯 Objectives
 
-## Requirements
-- MATLAB R2021a or higher
+- Develop a face detection system from scratch using basic image processing techniques.
+- Avoid the use of built-in high-level detectors (like `vision.CascadeObjectDetector`).
+- Build a GUI to support non-technical users in running detection easily.
+- Ensure accurate detection under different lighting conditions and backgrounds.
+
+---
+
+## 🛠️ How It Works
+
+The system pipeline consists of the following main stages:
+
+1. **Image Preprocessing**
+   - Apply Gaussian filter to reduce noise.
+   - Convert the RGB image to **YCbCr color space** to better separate skin tones.
+
+2. **Skin Detection**
+   - Threshold the Cr and Cb channels to isolate potential skin regions.
+   - Generate a binary skin mask.
+
+3. **Morphological Processing**
+   - Clean up the binary mask using morphological operations:
+     - `imfill` to fill holes
+     - `bwareaopen` to remove small objects
+
+4. **Region Analysis**
+   - Extract connected components using `regionprops`.
+   - Measure area, eccentricity, and bounding boxes.
+
+5. **Face Verification**
+   - Verify potential face regions using:
+     - **Elliptical shape matching**
+     - **Horizontal symmetry** (left/right pixel similarity)
+     - **Eccentricity constraint** to rule out elongated regions
+
+---
+
+## 🖥️ GUI Features
+
+- `Load Image`: Import an image from the local machine.
+- `Start Detection`: Run the detection pipeline and draw bounding boxes around detected faces.
+- `Reset`: Clear the interface for a new image.
+- `Exit`: Close the application.
+
+---
+
+## ✅ Results & Performance
+
+- **Accuracy**: High for well-lit, frontal face images.
+- **False Positives**: Very low due to strict shape and symmetry checks.
+- **Speed**: Acceptable for real-time use within the GUI.
+- **Robustness**: Performs well with variations in skin tone and lighting.
+
+---
+
+## ⚙️ Requirements
+
+- MATLAB R2021a or newer
 - Image Processing Toolbox
 
-## License
-This project is for educational and academic use.
+---
+
+## 📃 License
+
+This project was developed for academic purposes and is open for educational use.  
+Not intended for commercial applications.
+
+---
+
+## 📂 Repository Structure
+
